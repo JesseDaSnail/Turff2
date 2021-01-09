@@ -1,0 +1,81 @@
+<TurfList>:
+    GridLayout:
+        cols: 2
+        rows: 2
+
+        FloatLayout:
+            MDLabel:
+                text: root.huisgenoten[0].name
+                font_size: 30
+                halign: "center"
+                pos_hint: {"center_x": .5, "center_y": .85}
+
+            LongPressButton:
+                id: lpbutton1
+                name: "lpbutton1"
+                md_bg_color: 0.2, 0.2, 0.2, 1
+                text: str(root.p1_left)
+                font_size: 150
+                theme_text_color: "Custom"
+                text_color: (min(max(-int(root.p1_left)/24, 0), 1),max(min(int(root.p1_left)/24, 1), 0),0,1)
+                halign: "center"
+                pos_hint: {"center_x": .5, "center_y": .45}
+                size_hint: (0.8,0.6)
+
+        FloatLayout:
+            MDLabel:
+                text: root.huisgenoten[1].name
+                font_size: 30
+                halign: "center"
+                pos_hint: {"center_x": .5, "center_y": .85}
+
+            LongPressButton:
+                id: lpbutton2
+                name: "lpbutton2"
+                md_bg_color: 0.2, 0.2, 0.2, 1
+                text: str(root.p2_left)
+                font_size: 150
+                theme_text_color: "Custom"
+                text_color: (min(max(-int(root.p2_left)/24, 0), 1),max(min(int(root.p2_left)/24, 1), 0),0,1)
+                halign: "center"
+                pos_hint: {"center_x": .5, "center_y": .45}
+                size_hint: (0.8,0.6)
+
+        FloatLayout:
+            MDLabel:
+                text: root.huisgenoten[2].name
+                font_size: 30
+                halign: "center"
+                pos_hint: {"center_x": .5, "center_y": .85}
+
+            LongPressButton:
+                id: lpbutton3
+                name: "lpbutton3"
+                md_bg_color: 0.2, 0.2, 0.2, 1
+                text: str(root.p3_left)
+                font_size: 150
+                theme_text_color: "Custom"
+                text_color: (min(max(-int(root.p3_left)/24, 0), 1),max(min(int(root.p3_left)/24, 1), 0),0,1)
+                halign: "center"
+                pos_hint: {"center_x": .5, "center_y": .45}
+                size_hint: (0.8,0.6)
+
+        FloatLayout:
+            MDLabel:
+                text: root.huisgenoten[3].name
+                font_size: 30
+                halign: "center"
+                pos_hint: {"center_x": .5, "center_y": .85}
+
+            LongPressButton:
+                id: lpbutton4
+                name: "lpbutton4"
+                md_bg_color: 0.2, 0.2, 0.2, 1
+                text: str(root.p4_left)
+                font_size: 150
+                theme_text_color: "Custom"
+                text_color: (min(max(-int(root.p4_left)/24, 0), 1),max(min(int(root.p4_left)/24, 1), 0),0,1)
+                halign: "center"
+                pos_hint: {"center_x": .5, "center_y": .45}
+                size_hint: (0.8,0.6)
+

@@ -1,0 +1,40 @@
+<Gerechten>:
+    FloatLayout:
+        MDLabel:
+            text: root.current_food
+            font_size: 50
+            halign: "center"
+            pos_hint: {"center_x": .5, "center_y": .6}
+
+        MDTextField:
+            id: new_dish
+            font_size: 50
+            halign: "center"
+            pos_hint: {"center_x": .5, "center_y": .3}
+
+        MDRaisedButton:
+            text: "Randomize"
+            font_size: 30
+            pos_hint: {"center_x": .5, "center_y": .12}
+            size: (300,100)
+            size_hint: (0.25, 0.15)
+            on_release:
+                root.randomize()
+
+        MDRaisedButton:
+            text: "Add new dish"
+            font_size: 25
+            pos_hint: {"center_x": .8, "center_y": .12}
+            size: (300,100)
+            size_hint: (0.2, 0.15)
+            on_release:
+                root.add()
+
+        MDRaisedButton:
+            text: "Remove dish"
+            font_size: 25
+            pos_hint: {"center_x": .2, "center_y": .12}
+            size: (300,100)
+            size_hint: (0.2, 0.15)
+            on_release:
+                root.remove()

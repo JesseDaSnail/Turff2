@@ -1,0 +1,60 @@
+#: include turflist.kv
+#: include statistics.kv
+#: include gerechten.kv
+
+NavigationLayout:
+    id: nav_layout
+    ScreenManager:
+        Screen:
+            BoxLayout:
+                orientation: "vertical"
+                MDToolbar:
+                    title: "Turff 2.0"
+                    left_action_items: [["menu", lambda x: nav_drawer.set_state()]]
+                    elevation: 10
+
+                ScreenManager:
+                    id: screen_manager
+
+                    TurfList:
+                        id: turflist
+                        name: "turflist"
+
+                    Statistics:
+                        id: "statistics"
+                        name: "statistics"
+
+                    Gerechten:
+                        id: "gerechten"
+                        name: "gerechten"
+
+    MDNavigationDrawer:
+        id: nav_drawer
+        BoxLayout:
+            orientation: "vertical"
+            padding: "30dp"
+            spacing: "30dp"
+
+            Image:
+                size_hint_y: .3
+                source: "resources/turff.png"
+
+            ScrollView:
+                MDList:
+                    OneLineListItem:
+                        text: "Turf List"
+                        on_release:
+                            screen_manager.current = "turflist"
+                            nav_drawer.set_state()
+
+                    OneLineListItem:
+                        text: "Statistics"
+                        on_release:
+                            screen_manager.current = "statistics"
+                            nav_drawer.set_state()
+
+                    OneLineListItem:
+                        text: "Gerechten"
+                        on_release:
+                            screen_manager.current = "gerechten"
+                            nav_drawer.set_state()
